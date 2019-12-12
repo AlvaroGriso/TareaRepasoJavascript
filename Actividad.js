@@ -22,3 +22,8 @@ function exercise2(word) {
 }
 console.log(exercise2("lavan esa base naval"));//palindromo
 console.log(exercise2("nananananannabatman"));//noPalindromo
+
+var exercise3= function(text) {
+    return text.split('').sort().join('');
+}
+console.log(exercise3('rodolfoaurelio'))
