@@ -124,5 +124,13 @@ function exercise9(array) {
     console.log(numX, numY);
 }
 exercise9([1,2,3,4,5,6]);
+//ejercicio 10
+str=8; //introducir aquí el número que deseas calcular.
+var num = 1;
 
+while (str !=0){
+    num = num * str;
+    str=str-1;
+}
+console.log(num);
 
