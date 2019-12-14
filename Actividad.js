@@ -29,12 +29,28 @@ function exercise2({word}) {
 console.log(exercise2({word: "lavan esa base naval"}));//palindromo
 console.log(exercise2({word: "nananananannabatman"}));//noPalindromo
 
-//ejercicio3
-let exercise3 = function (text) {
-    return text.split('').sort().join('');
-};
-console.log(exercise3('rodolfoaurelio'));
+// ejercicio3
 
+const exercise3 = function (mayusc) {
+    return mayusc.split('').sort().join('');
+};
+
+console.log(exercise3("webmaster"));
+
+// ejercicio4
+
+function exercise4(mayusc) {
+    let string = mayusc.split(' ');
+    const length = [];
+    string.filter(function (input) {
+            length.push(input.charAt(0).toUpperCase() + input.substr(1));
+        }
+    );
+
+    return length.join(" ")
+}
+
+console.log(exercise4("javascript es un lenguaje funcional"));
 // ejercicio5
 function exercise5(sentence) {
     let maxiWord = "";
@@ -65,6 +81,24 @@ function exercise6({sentence}) {
 
 console.log("Tres tristes tigres, tragan trigo en un trigal");
 console.log(exercise6({sentence: "Tres tristes tigres, tragan trigo en un trigal"}));
+//ejercicio 7
+function by(txt1) {
+    num = 2;
+    primo = true;
+
+    while (primo && num <  txt1) {
+        if (txt1 % num == 0) {
+            primo = false;
+        } else {
+            num = num + 1;
+        }
+    }
+    if (primo && txt1 > 1)
+        return "es primo";
+    else
+        return "no es primo";
+}
+console.log(by(8));
 
 //Ejercicio8
 console.log(2);
