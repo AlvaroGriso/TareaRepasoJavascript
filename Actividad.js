@@ -11,7 +11,6 @@ function exercise1(num) {
 
 
 }
-
 console.log(2341);
 console.log(exercise1(2341));
 
@@ -27,9 +26,9 @@ function exercise2(word) {
     }
     return true;
 }
-
 console.log(exercise2("lavan esa base naval"));//palindromo
-console.log(exercise2("nananananannabatman"));//noPalindromo
+console.log(exercise2("nananananannabatman")); //noPalindromo
+
 
 //ejercicio3
 console.log("exercise3");
@@ -83,15 +82,17 @@ function exercise6({sentence}) {
 
 console.log("Tres tristes tigres, tragan trigo en un trigal");
 console.log(exercise6({sentence: "Tres tristes tigres, tragan trigo en un trigal"}));
+ //introducir aquí el número que deseas calcular.
+let num;
 
 //ejercicio 7
 console.log("exercise7");
 function exercise7(txt1) {
     num = 2;
-    primo = true;
+    let primo = true;
 
     while (primo && num <  txt1) {
-        if (txt1 % num == 0) {
+        if (txt1 % num === 0) {
             primo = false;
         } else {
             num = num + 1;
@@ -129,15 +130,12 @@ function exercise9(array) {
     });
     console.log(numX, numY);
 }
-
 exercise9([1,2,3,4,5,6]);
 
 //ejercicio 10
-console.log("exercise10");
-str=8; //introducir aquí el número que deseas calcular.
-var num = 1;
-
-while (str !=0){
+str=8;
+num = 1;
+while (str !==0){
     num = num * str;
     str=str-1;
 }
@@ -149,7 +147,7 @@ function exercise12(sente, caract) {
     let sentenceNormal = sente.toLowerCase();
     let counter = 0;
     for (let i = 0; i < sentenceNormal.length; i++) {
-        if (sentenceNormal[i]==caract){
+        if (sentenceNormal[i]===caract){
             counter++;
         }
     }
@@ -170,20 +168,17 @@ function exercise13(sentence) {
         }
     }
 }
-console.log("ramon esta apaladusuiorekd en la vida")
+console.log("ramon esta apaladusuiorekd en la vida");
 console.log(exercise13("ramon esta apaladusuiorekd en la vida"));
 
 //Ejercicio14
 console.log("exercise14");
 function exercise14(num, num2) {
     let sum = num * num;
-    let result = sum + num2;
-    return result;
+    return sum + num2;
 }
 
 function exercise14_2(result) {
-    let div = (result(13, 14 ) / 2)*4;
-    return div;
+    return (result(13, 14) / 2) * 4;
 }
-
 console.log(exercise14_2(exercise14));
