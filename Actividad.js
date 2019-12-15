@@ -1,4 +1,5 @@
 //ejercico 1
+console.log("exercise1");
 function exercise1(num) {
     let invert = 0;
     let rest = num;
@@ -15,7 +16,8 @@ console.log(2341);
 console.log(exercise1(2341));
 
 // ejercico2
-function exercise2({word}) {
+console.log("exercise2");
+function exercise2(word) {
     word = word.replace(/ /g, "");
 
     for (let i = 0; i < word.length; i++) {
@@ -26,16 +28,31 @@ function exercise2({word}) {
     return true;
 }
 
-console.log(exercise2({word: "lavan esa base naval"}));//palindromo
-console.log(exercise2({word: "nananananannabatman"}));//noPalindromo
+console.log(exercise2("lavan esa base naval"));//palindromo
+console.log(exercise2("nananananannabatman"));//noPalindromo
 
 //ejercicio3
-let exercise3 = function (text) {
-    return text.split('').sort().join('');
-};
+console.log("exercise3");
+let exercise3 = (text) => text.split('').sort().join('');
+
 console.log(exercise3('rodolfoaurelio'));
 
+// ejercicio4
+console.log("exercise4");
+function exercise4(mayusc) {
+    let string = mayusc.split(' ');
+    const length = [];
+    string.filter(function (input) {
+            length.push(input.charAt(0).toUpperCase() + input.substr(1));
+        }
+    );
+
+    return length.join(" ")
+}
+console.log(exercise4("javascript es un lenguaje funcional"));
+
 // ejercicio5
+console.log("exercise5");
 function exercise5(sentence) {
     let maxiWord = "";
     let words = sentence.replace(",", " ").split(" ");
@@ -53,6 +70,7 @@ console.log("Au es un gato");
 console.log(exercise5("Au es un gato"));
 
 //ejercicio6
+console.log("exercise6");
 function exercise6({sentence}) {
     let c = 0;
     for (let i = 0; i < sentence.length - 1; i++) {
@@ -66,13 +84,35 @@ function exercise6({sentence}) {
 console.log("Tres tristes tigres, tragan trigo en un trigal");
 console.log(exercise6({sentence: "Tres tristes tigres, tragan trigo en un trigal"}));
 
+//ejercicio 7
+console.log("exercise7");
+function exercise7(txt1) {
+    num = 2;
+    primo = true;
+
+    while (primo && num <  txt1) {
+        if (txt1 % num == 0) {
+            primo = false;
+        } else {
+            num = num + 1;
+        }
+    }
+    if (primo && txt1 > 1)
+        return "es primo";
+    else
+        return "no es primo";
+}
+console.log(exercise7(8));
+
 //Ejercicio8
+console.log("exercise8");
 console.log(2);
 console.log(typeof 2);
 console.log("Papillon");
 console.log(typeof "Papillon");
 
 //Ejercicio9
+console.log("exercise9");
 function exercise9(array) {
     array.sort();
     let c = 0;
@@ -89,6 +129,61 @@ function exercise9(array) {
     });
     console.log(numX, numY);
 }
+
 exercise9([1,2,3,4,5,6]);
 
+//ejercicio 10
+console.log("exercise10");
+str=8; //introducir aquí el número que deseas calcular.
+var num = 1;
 
+while (str !=0){
+    num = num * str;
+    str=str-1;
+}
+console.log(num);
+
+//Ejercicio12
+console.log("exercise12");
+function exercise12(sente, caract) {
+    let sentenceNormal = sente.toLowerCase();
+    let counter = 0;
+    for (let i = 0; i < sentenceNormal.length; i++) {
+        if (sentenceNormal[i]==caract){
+            counter++;
+        }
+    }
+    return counter;
+}
+console.log("javascript es un lenguaje funcional");
+console.log("a");
+console.log(exercise12("javascript es un lenguaje funcional", "a" ));
+
+//Ejercicio13
+console.log("exercise13");
+function exercise13(sentence) {
+    let sentenceLoCa = sentence.toLowerCase();
+    for (let i = 0; i < sentence.length; i++) {
+        let carAct = sentence.charAt(i).toLowerCase();
+        if (sentenceLoCa.indexOf(carAct) === sentenceLoCa.lastIndexOf(carAct)) {
+            return sentence.charAt(i);
+        }
+    }
+}
+console.log("ramon esta apaladusuiorekd en la vida")
+console.log(exercise13("ramon esta apaladusuiorekd en la vida"));
+
+//Ejercicio14
+console.log("exercise14");
+function exercise14(num, num2) {
+    let sum = num * num;
+    let result = sum + num2;
+    return result;
+}
+
+function exercise14_2(result) {
+    let div = (result(13, 14 ) / 2)*4;
+    return div;
+}
+
+console.log(exercise14_2(exercise14));
