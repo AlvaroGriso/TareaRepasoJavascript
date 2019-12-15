@@ -1,5 +1,6 @@
 //ejercico 1
 console.log("exercise1");
+
 function exercise1(num) {
     let invert = 0;
     let rest = num;
@@ -11,11 +12,13 @@ function exercise1(num) {
 
 
 }
+
 console.log(2341);
 console.log(exercise1(2341));
 
 // ejercico2
 console.log("exercise2");
+
 function exercise2(word) {
     word = word.replace(/ /g, "");
 
@@ -26,6 +29,7 @@ function exercise2(word) {
     }
     return true;
 }
+
 console.log(exercise2("lavan esa base naval"));//palindromo
 console.log(exercise2("nananananannabatman")); //noPalindromo
 
@@ -38,6 +42,7 @@ console.log(exercise3('rodolfoaurelio'));
 
 // ejercicio4
 console.log("exercise4");
+
 function exercise4(mayusc) {
     let string = mayusc.split(' ');
     const length = [];
@@ -48,10 +53,12 @@ function exercise4(mayusc) {
 
     return length.join(" ")
 }
+
 console.log(exercise4("javascript es un lenguaje funcional"));
 
 // ejercicio5
 console.log("exercise5");
+
 function exercise5(sentence) {
     let maxiWord = "";
     let words = sentence.replace(",", " ").split(" ");
@@ -70,9 +77,10 @@ console.log(exercise5("Au es un gato"));
 
 //ejercicio6
 console.log("exercise6");
+
 function exercise6({sentence}) {
     let c = 0;
-    for (let i = 0; i < sentence.length - 1; i++) {
+    for (let i = 0; i < sentence.length; i++) {
         if (sentence.charAt(i) === "a" || sentence.charAt(i) === "e" || sentence.charAt(i) === "i" || sentence.charAt(i) === "o" || sentence.charAt(i) === "u") {
             c++;
         }
@@ -82,16 +90,17 @@ function exercise6({sentence}) {
 
 console.log("Tres tristes tigres, tragan trigo en un trigal");
 console.log(exercise6({sentence: "Tres tristes tigres, tragan trigo en un trigal"}));
- //introducir aquí el número que deseas calcular.
+//introducir aquí el número que deseas calcular.
 let num;
 
 //ejercicio 7
 console.log("exercise7");
+
 function exercise7(txt1) {
     num = 2;
     let primo = true;
 
-    while (primo && num <  txt1) {
+    while (primo && num < txt1) {
         if (txt1 % num === 0) {
             primo = false;
         } else {
@@ -103,7 +112,8 @@ function exercise7(txt1) {
     else
         return "no es primo";
 }
-console.log(exercise7(8));
+
+console.log(exercise7(257));
 
 //Ejercicio8
 console.log("exercise8");
@@ -114,6 +124,7 @@ console.log(typeof "Papillon");
 
 //Ejercicio9
 console.log("exercise9");
+
 function exercise9(array) {
     array.sort();
     let c = 0;
@@ -130,35 +141,69 @@ function exercise9(array) {
     });
     console.log(numX, numY);
 }
-exercise9([1,2,3,4,5,6]);
+
+exercise9([1, 2, 3, 4, 5, 6]);
 
 //ejercicio 10
-str=8;
-num = 1;
-while (str !==0){
-    num = num * str;
-    str=str-1;
+console.log("exercise10");
+let str = 8;
+let numx = 1;
+while (str !== 0) {
+    numx += numx * str;
+    str = str - 1;
 }
-console.log(num);
+console.log(numx);
+
+//Ejercicio11
+console.log("exercise11");
+
+function exercise11(cifra) {
+    let monedas = [];
+    for (let i = 0; cifra !== 0; i++) {
+        if (cifra >= 25) {
+            cifra -= 25;
+            monedas[i] = 25;
+        } else if (cifra >= 10) {
+            cifra -= 10;
+            monedas[i] = 10;
+        } else if (cifra >= 5) {
+            cifra -= 5;
+            monedas[i] = 5;
+        } else if (cifra >= 2) {
+            cifra -= 2;
+            monedas[i] = 2;
+        } else if (cifra >= 1) {
+            cifra -= 1;
+            monedas[i] = 1;
+        }
+    }
+    return monedas;
+}
+
+console.log(46);
+console.log(exercise11(46));
 
 //Ejercicio12
 console.log("exercise12");
+
 function exercise12(sente, caract) {
     let sentenceNormal = sente.toLowerCase();
     let counter = 0;
     for (let i = 0; i < sentenceNormal.length; i++) {
-        if (sentenceNormal[i]===caract){
+        if (sentenceNormal[i] === caract) {
             counter++;
         }
     }
     return counter;
 }
+
 console.log("javascript es un lenguaje funcional");
 console.log("a");
-console.log(exercise12("javascript es un lenguaje funcional", "a" ));
+console.log(exercise12("javascript es un lenguaje funcional", "a"));
 
 //Ejercicio13
 console.log("exercise13");
+
 function exercise13(sentence) {
     let sentenceLoCa = sentence.toLowerCase();
     for (let i = 0; i < sentence.length; i++) {
@@ -168,11 +213,13 @@ function exercise13(sentence) {
         }
     }
 }
+
 console.log("ramon esta apaladusuiorekd en la vida");
 console.log(exercise13("ramon esta apaladusuiorekd en la vida"));
 
 //Ejercicio14
 console.log("exercise14");
+
 function exercise14(num, num2) {
     let sum = num * num;
     return sum + num2;
@@ -181,4 +228,5 @@ function exercise14(num, num2) {
 function exercise14_2(result) {
     return (result(13, 14) / 2) * 4;
 }
+
 console.log(exercise14_2(exercise14));
